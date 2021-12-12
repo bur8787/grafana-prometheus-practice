@@ -1,0 +1,15 @@
+scrape_configs:
+  - job_name: 'vernemq'
+    scrape_interval: 5s
+    scrape_timeout: 5s
+    static_configs:
+      - targets: ['vernemq:8888']
+        labels:
+          env: prod
+  - job_name: 'vernemq2'
+    scrape_interval: 5s
+    scrape_timeout: 5s
+    static_configs:
+      - targets: ['vernemq2:8888']
+        labels:
+          env: dev
